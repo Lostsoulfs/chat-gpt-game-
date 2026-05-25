@@ -4,13 +4,21 @@ Dice Duel is a small Python game used as a controlled reliability-testing target
 
 ## Current Stable Version
 
-Status: stable version declared for GitHub tracking on 2026-05-25 after local Drive cleanup/move mismatch.
+Status: current stable baseline frozen locally on 2026-05-25 after static-analysis cleanup and passing verification.
 
-Current source identity provided from the local `dice_duel_lab/` guard output:
+Current guarded source identity:
 
 ```text
-dice_duel.py: dbc0767716e7ddb7cb6350ceff61688e89a96ee703ec19b5cec6150b4a35eb2d
+dice_duel.py: 3f97cd901f569d4d0309c1a88852de2314dabb0190f9c45e05eba0fc6a87bfd1
 dice_duel_tests.py: 5fcc56dc5701aee1258841e48dc35f668a667d519833a4df0ee7729e025cc544
+```
+
+Local freeze result:
+
+```text
+Guard updated: top-level filename-to-hash map
+Backup written: .dice_duel_guard.json.before_current_stable_freeze
+Guard check: OK — guarded files match baseline (no drift)
 ```
 
 Previous full-sweep evidence preserved for the reliability-lab checkpoint:
@@ -54,3 +62,5 @@ Not included yet:
 ## Next Branch
 
 Recommended next branch: extract reusable reliability toolkit patterns from Dice Duel while preserving the current stable version identity.
+
+Source push note: push `dice_duel.py` only from byte-exact local content matching the hash above.
